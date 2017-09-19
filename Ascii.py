@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from PIL import Image, ImageFont, ImageDraw
 img = Image.open('prof.jpg').convert('RGB')
 w, h = img.size
@@ -34,4 +35,6 @@ for y in range(0, h, fontsize): # The third parameter in range is a step
         else:
             character = 'W'
         draw.text((x, y), character, font=font, fill = '#000000') # #000000 corresponds black
-output_img.show()
+
+if __name__ == '__main__':
+    output_img.show()
